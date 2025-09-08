@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sutauruki Hub</title>
+
+  <!-- Icon -->
+   <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Sutauruki" />
+  <link rel="manifest" href="/assets/icons/site.webmanifest" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style type="text/tailwindcss">
+    @theme {
+      --color-background: #0F172A;
+      --color-primary: #38BDF8;
+      --color-secondary: #FACC15;
+      --color-neon: #39FF14;
+      --color-text: #E2E8F0;
+
+      /* Add your font */
+      --font-sutaruki: 'Rajdhani', sans-serif;
+    }
+  </style>
+</head>
+<body class=" min-h-screen  font-sutaruki text-text font-bold px-6">
+  <!-- Vanta background attaches here -->
+    <div id="vanta-bg" class="absolute inset-0"></div>
+  <header class=" py-1 flex items-center justify-between text-xl z-10 relative">
+        <img src="assets/images/Logo.png" alt="Logo" class="h-18">
+
+        <nav class="space-x-5 ml-5 text-xl">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </nav>
+
+        <a href="" class="bg-primary py-2 rounded-lg px-4 mr-5 shadow focus:shadow-neon shadow-sm">Explore Tools</a>
+  </header>
+
+  <main class="relative z-10">
+  <section class="min-h-screen" id="home">
+
+    <!-- Content -->
+    <div class=" h-[90vh] px-3 flex flex-col items-center justify-center text-center">
+      <h1 class="text-8xl">Sutauruki Hub</h1>
+      <p class="text-xl mt-4">A collection of useful mini tools and projects by Sutauruki</p>
+
+      <div class="pt-10 space-x-4">
+        <a href="" class="bg-primary px-4 py-2 rounded shadow shadow-sm focus:shadow-neon transition">Explore Now</a>
+        <a href="" class="bg-primary/10 px-4 py-2 rounded border-neon border">Portfolio</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Three.js -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js"></script>
+
+<!-- Vanta Globe -->
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  VANTA.GLOBE({
+    el: "#vanta-bg",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x38BDF8,
+    backgroundColor: 0x0f172a
+  })
+})
+</script>
+
+</body>
+</html>
